@@ -17,8 +17,7 @@ const Hero = () => {
 						<span className="text-[#915eff]">The Reptiles World</span>
 					</h1>
 					<p className={`${styles.heroSubText} mt-2 text-white-100`}>
-						Explore, identify and get educated regarding snake species around
-						the world with us.
+					Identify snakes, Explore and Learn about snake species in Sri Lanka.
 					</p>
 				</div>
 			</div>

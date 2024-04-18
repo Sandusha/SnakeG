@@ -26,11 +26,11 @@ export const navLinks = [
     },
     {
         id: "learn",
-        title: "Learn",
+        title: "Explore",
     },
     {
         id: "identification",
-        title: "Identification",
+        title: "Identify",
     }
 ];
 
@@ -38,17 +38,17 @@ export const services = [
     {
         title: "Automated Identification",
         icon: automation,
-        details: "You can identify snake species by uploading an image with the use of an automated Machine Learning model."
+        details: "Spot any snake? Just upload a photo and our new tool powered with machine learning will tell you what species it is."
     },
     {
-        title: "Gather Knowledge",
+        title: "Learn",
         icon: idea,
-        details: "Learn about most venomous and non-venomous snake species around the world and their habits."
+        details: "Embark on a journey around the world to discover the fascinating world of snakes! We'll explore both venomous and non-venomous species, learning about their unique habits and adaptations."
     },
     {
-        title: "Be Aware",
+        title: "Be aware",
         icon: treatment,
-        details: "Get to know regarding paramedic steps which you can follow when it comes to snakebite envenomation and how you can avoid it."
+        details: "Learn what paramedics do to treat snakebites and how to prevent them from happening in the first place."
     }
 ]
 
@@ -58,13 +58,13 @@ export const treatments = [
         icon: dos,
         iconBg: "#383E56",
         points: [
-            "Do stay calm and reassure the bitten person.",
-            "Do move slowly away from the snake.",
-            "Do rinse venom in the eyes with running water in case of spitting snakes.",
-            "Do leave the wound area(bite mark) alone.",
-            "Do remove all the tight items around the affected area.",
-            "Do lay the patient on his/her side to reduce movement of affected area.",
-            "Do rush to the nearest health facility or medical treatment.",
+            "Stay calm and reassure the bitten person.",
+            "Move slowly away from the snake.",
+            "Rinse venom in the eyes with running water in case of spitting snakes.",
+            "Leave the wound area(bite mark) alone.",
+            "Remove all the tight items around the affected area.",
+            "Lay the patient on his/her side to reduce movement of affected area.",
+            "Rush to the nearest health facility or medical treatment.",
         ],
     },
     {

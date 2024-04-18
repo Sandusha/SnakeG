@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Identification from "./components/Identification";
-import Learn from "./components/Learn";
+import Explore from "./components/Explore";
 import Services from "./components/Services";
 import Treatments from "./components/Treatments";
 import Steps from "./components/Steps";
@@ -18,7 +18,7 @@ const App = () => {
 				</div>
 				<Services />
 				<Treatments />
-				<Learn />
+				<Explore />
 				<Steps />
 				<div className="relative z-0">
 					<Identification />

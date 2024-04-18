@@ -55,9 +55,11 @@ const Services = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        This application's intention is to help society in identifying snake
-        species in order to keep them and both snake species away from danger!
-        Here are the services you can get from this application,
+        Want to safely identify snakes and keep everyone out of harm's way?
+
+This app can help! With it, you can learn to recognize different snake species so you can avoid danger and protect the snakes themselves.
+
+Here's what the app offers:
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
