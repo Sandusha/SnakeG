@@ -5,11 +5,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#050816",
+        primary: "#0e0e0e",
         secondary: "#aaa6c3",
-        tertiary: "#151030",
-        "black-100": "#100d25",
-        "black-200": "#090325",
+        tertiary: "#373737",
+        "black-100": "#464646",
+        "black-200": "#313131",
         "white-100": "#f3f3f3",
       },
       boxShadow: {

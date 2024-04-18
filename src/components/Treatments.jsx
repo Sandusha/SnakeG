@@ -15,7 +15,7 @@ const TreatmentCard = ({ treatment }) => {
 	return (
 		<VerticalTimelineElement
 			contentStyle={{
-				background: "#1d1836",
+				background: "#373737",
 				color: "#fff",
 			}}
 			contentArrowStyle={{ borderRight: "7px solid  #232631" }}
