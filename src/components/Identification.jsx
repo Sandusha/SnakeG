@@ -23,9 +23,13 @@ const Identification = () => {
     formData.append("image", file);
 
     try {
+      // Get JWT token from local storage (if the user is logged in)
+      const token = localStorage.getItem("token");
+
       const response = await axios.post("http://127.0.0.1:5000/predict", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
+          ...(token && { Authorization: `Bearer ${token}` }) // Add token to headers if it exists
         },
       });
 

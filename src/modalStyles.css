@@ -1,0 +1,144 @@
+/* Overlay */
+.ReactModal__Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Container */
+.Modal {
+  background: #222121; /* Dark background for a modern look */
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 400px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.ModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.ModalHeader h2 {
+  color: #e0e0e0; /* Lighter text color for contrast */
+  font-size: 24px;
+}
+
+.ModalHeader button {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #e0e0e0;
+}
+
+/* Form */
+.ModalForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.ModalForm input {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #e0e0e0;
+  background: #333;
+}
+
+.PasswordWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.PasswordWrapper input {
+  padding-right: 40px; /* Space for the toggle button */
+}
+
+.PasswordToggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #e0e0e0;
+  font-size: 18px;
+}
+
+.ModalForm button {
+  background-color: #915EFF; /* Main button color */
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.ModalForm button:hover {
+  background-color: #7d4c9b; /* Darker shade for hover effect */
+}
+
+.ErrorText {
+  color: #ff4d4d; /* Red color for error messages */
+  margin-bottom: 15px;
+}
+
+.RegisterPrompt {
+  margin-top: 20px;
+  color: #e0e0e0;
+}
+
+.text-link {
+  color: #915EFF;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.text-link:hover {
+  color: #7d4c9b;
+}
+
+.PasswordWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.PasswordWrapper input {
+  width: 100%;
+  padding-right: 40px; /* Space for the eye icon */
+  box-sizing: border-box;
+}
+
+.PasswordToggle {
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 11px); /* Adjusted to better center the icon */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #e0e0e0;
+  font-size: 18px;
+}
+
