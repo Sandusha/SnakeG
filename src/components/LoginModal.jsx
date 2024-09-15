@@ -6,26 +6,38 @@ import "../modalStyles.css";
 const LoginModal = ({ isOpen, onRequestClose, onLogin, openRegisterModal }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);  // New state for toggling password visibility
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
+  const [touchedEmail, setTouchedEmail] = useState(false);
+  const [touchedPassword, setTouchedPassword] = useState(false);
 
   const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setError(""); // Clear previous errors
+
+    if (email.trim() === "") {
+      setError("Email field cannot be empty");
+      return;
+    }
     if (!validateEmail(email)) {
       setError("Please enter a valid email address");
+      return;
+    }
+    if (password.trim() === "") {
+      setError("Password field cannot be empty");
       return;
     }
     if (password.length < 6) {
       setError("Password must be at least 6 characters long");
       return;
     }
+
     try {
       const response = await axios.post("http://127.0.0.1:5000/login", { email, password });
       localStorage.setItem('token', response.data.token);
       onLogin();
-      setError("");
     } catch (err) {
       setError("Invalid email or password");
     }
@@ -40,36 +52,68 @@ const LoginModal = ({ isOpen, onRequestClose, onLogin, openRegisterModal }) => {
     setShowPassword(!showPassword);
   };
 
+  const resetForm = () => {
+    setEmail("");
+    setPassword("");
+    setShowPassword(false);
+    setError("");
+    setTouchedEmail(false);
+    setTouchedPassword(false);
+  };
+
   return (
-    <Modal isOpen={isOpen} onRequestClose={onRequestClose} className="Modal" overlayClassName="ReactModal__Overlay">
+    <Modal 
+      isOpen={isOpen} 
+      onRequestClose={() => {
+        resetForm();
+        onRequestClose();
+      }} 
+      className="Modal" 
+      overlayClassName="ReactModal__Overlay"
+    >
       <div className="ModalHeader">
         <h2>Login</h2>
-        <button onClick={onRequestClose}>×</button>
+        <button onClick={() => {
+          resetForm();
+          onRequestClose();
+        }}>×</button>
       </div>
       <form className="ModalForm" onSubmit={handleLogin}>
+        <div className="InputWrapper">
         <input
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          onBlur={() => setTouchedEmail(true)}
           required
-        />
+          className={touchedEmail && !validateEmail(email) && email.trim() !== "" ? "error" : ""}
+          />
+           {touchedEmail && email.trim() === "" && (
+           <p className="ErrorText">Email field cannot be empty</p>
+           )}
+           {touchedEmail && email.trim() !== "" && !validateEmail(email) && (
+           <p className="ErrorText">Please enter a valid email address</p>
+           )}
+         </div>
         <div className="PasswordWrapper">
           <input
             type={showPassword ? "text" : "password"}
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            onBlur={() => setTouchedPassword(true)}
             required
           />
           <span className="PasswordToggle" onClick={togglePasswordVisibility}>
-            {showPassword ? "👁️" : "👁️‍🗨️"}  {/* Emoji for eye icon */}
+            {showPassword ? "👁️" : "👁️‍🗨️"}
           </span>
         </div>
+        {touchedPassword && password.trim() === "" && <p className="ErrorText">Password field cannot be empty</p>}
         {error && <p className="ErrorText">{error}</p>}
         <button type="submit">Login</button>
       </form>
-      <p className="RegisterPrompt">
+      <p className="RegisterformPrompt">
         Not registered yet? <button onClick={handleRegisterClick} className="text-link">Go here and register</button>
       </p>
     </Modal>

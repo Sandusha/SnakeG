@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
   z-index: 1000;
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@
 
 /* Modal Container */
 .Modal {
-  background: #222121; /* Dark background for a modern look */
+  background: rgba(255, 255, 255, 0.1); /* Transparent white */
   border-radius: 12px;
   padding: 30px;
   max-width: 400px;
@@ -23,6 +23,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  backdrop-filter: blur(10px); /* Blur for glass effect */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for clarity */
 }
 
 /* Header */
@@ -61,16 +64,20 @@
   border-radius: 8px;
   font-size: 16px;
   color: #e0e0e0;
-  background: #333;
+  background: rgba(51, 51, 51, 0.5); /* Semi-transparent background */
+  width: calc(100% - 30px); /* Adjust to ensure full width minus padding */
+  box-sizing: border-box;
 }
 
-.PasswordWrapper {
+.PasswordWrapper, .InputWrapper {
   position: relative;
   width: 100%;
 }
 
-.PasswordWrapper input {
-  padding-right: 40px; /* Space for the toggle button */
+.PasswordWrapper input, .InputWrapper input {
+  width: 100%;
+  padding-right: 40px; /* Space for the toggle button or error icon */
+  box-sizing: border-box;
 }
 
 .PasswordToggle {
@@ -83,6 +90,20 @@
   cursor: pointer;
   color: #e0e0e0;
   font-size: 18px;
+}
+
+.InputWrapper p.ErrorText {
+  color: red;
+  font-size: 14px;
+  margin-top: -15px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.ErrorText {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 .ModalForm button {
@@ -100,12 +121,7 @@
   background-color: #7d4c9b; /* Darker shade for hover effect */
 }
 
-.ErrorText {
-  color: #ff4d4d; /* Red color for error messages */
-  margin-bottom: 15px;
-}
-
-.RegisterPrompt {
+.RegisterformPrompt {
   margin-top: 20px;
   color: #e0e0e0;
 }
@@ -142,3 +158,38 @@
   font-size: 18px;
 }
 
+.InputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.InputWrapper input.error {
+  border-color: red;
+  background-color: rgba(255, 0, 0, 0.1); /* Transparent red for error */
+}
+
+.InputWrapper p.ErrorText {
+  color: red;
+  font-size: 14px;
+  margin-top: -15px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px); /* Start from above */
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0); /* Move into place */
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px); /* Fade out and move up */
+  }
+}

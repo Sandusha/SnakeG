@@ -7,6 +7,7 @@ import navIcon from '../assets/navIcon.png';
 import close from '../assets/close.png';
 import LoginModal from './LoginModal';
 import RegisterModal from './RegisterModal';
+import "../Navbar.css";
 
 const Navbar = ({ isLoggedIn, onLogout, openLoginModal, openRegisterModal, loginModalIsOpen, registerModalIsOpen }) => {
   const [active, setActive] = useState('');

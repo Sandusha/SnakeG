@@ -26,10 +26,10 @@ const Predictions = () => {
 
   return (
     <div className="min-h-screen bg-primary flex flex-col justify-center items-center">
-      <div className="bg-dark-gray shadow-lg rounded-lg p-8 w-full max-w-4xl">
+      <div className="bg-black-200 shadow-lg rounded-lg p-8 w-full max-w-4xl">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-300">Recent Predictions</h2>
         <div className="overflow-x-auto">
-          <table className="min-w-full bg-dark-gray border border-gray-600">
+          <table className="min-w-full bg-black-200 border border-gray-600">
             <thead>
               <tr>
                 <th className="py-3 px-5 text-left bg-gray-700 text-gray-300 font-semibold uppercase tracking-wider">
@@ -68,5 +68,4 @@ const Predictions = () => {
     </div>
   );
 };
-
 export default Predictions;
