@@ -1,2 +1,2 @@
-# SnakeG
- UiSnakeGenius
+# Snake Genius Application UI
+
