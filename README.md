@@ -25,7 +25,7 @@ Installation and Setup
 
     bash
 
-git clone https://github.com/Sandusha/SnakeG
+git clone https://github.com/Sandusha/SnakeG.git
 cd snake-identification-frontend
 
 Install dependencies:
