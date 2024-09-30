@@ -97,19 +97,19 @@ export const steps = [
         title: "Behavior and Habitat of Snakes",
         icon: one,
         iconBg: "#E6DEDD",
-        points: "Behavior is one component that may help identify snakes. Each species of snake exhibits different behaviors. Thus, remembering these differences can pose a challenge to an untrained individual. Regardless, behavior observation is an important component that helps wildlife professionals determine the right solutions in situations when wildlife and humans interact. One of the most well-known behavior traits can be observed in the rattlesnake.",
+        points: "Venomous snakes in Sri Lanka can be identified by observing their behavior and habitat. Cobras, known for their defensive hood-spreading and loud hissing, are commonly found in a variety of habitats including forests, grasslands, and near human settlements. The Common Krait is primarily nocturnal and shy, often hiding during the day in rural areas, agricultural fields, or under debris. Russell's Viper is highly aggressive, often producing a distinctive loud hiss before striking, and is frequently found in open fields, grasslands, and farmlands. The Saw-scaled Viper is quick to strike when threatened and makes a unique rattling sound by rubbing its rough scales together; it prefers arid, dry regions like scrublands and rocky areas. The Hump-nosed Viper is more sluggish and tends to stay hidden in wet, forested environments, often in dense vegetation or under leaf litter. Understanding these behaviors and habitats is key to identifying and avoiding these dangerous species in Sri Lanka.",
     },
     {
         title: "Head",
         icon: two,
         iconBg: "#E6DEDD",
-        points: "Venomous snakes have distinct heads. While non-venomous snakes have a rounded head, venomous snakes have a more triangular-shaped head. The shape of a venomous snake's head may deter predators. However, some non-venomous snakes can mimic the triangular shape of non-venomous snakes by flattening their heads. This can help them appear more dangerous to potential predators.",
+        points: "Venomous snakes in Sri Lanka can be identified by their distinct head shapes. The Cobra has a broad, slightly flattened head that expands into a hood when threatened, while the Common Krait has a small, rounded head that blends seamlessly into its slender body. Russell's Viper has a prominent, triangular head that is much wider than its neck, with large nostrils and vertical pupils. Similarly, the Saw-scaled Viper also has a short, triangular head, with rough scales and vertical pupils. The Hump-nosed Viper features a distinct, pointed snout and a triangular head. These head shapes, particularly the triangular form in vipers and the hood in Cobras, are key indicators of venomous species in Sri Lanka.",
     },
     {
         title: "Coloring",
         icon: three,
         iconBg: "#E6DEDD",
-        points: "While there are only four types of venomous snakes in the U.S., each type contains many subspecies with size and color variations that helps them blend in with their environments. Thus, coloring may not be an efficient method for distinguishing between a venomous and non-venomous snake. For example, venomous coral snakes and non-venomous scarlet king snakes both have a banded pattern of yellow, brown and black on their scales. The difference between the two types is that the red bands touch the yellow bands on a coral snake whereas red bands touch the black bands on scarlet king snakes.",
+        points: "Venomous snakes in Sri Lanka can often be identified by their distinct coloring. The Cobra (Naja naja) typically comes in shades of brown, black, or yellow, with a distinctive spectacle pattern on its hood. The Common Krait (Bungarus caeruleus) has a glossy black or bluish-black body with narrow white bands, creating a sharp contrast. Russell's Viper (Daboia russelii) is marked with a tan or brown body covered in dark, leopard-like spots. The Saw-scaled Viper (Echis carinatus) has a pale brown or gray body with light, zigzag patterns and rough, keeled scales. Lastly, the Hump-nosed Viper (Hypnale hypnale) displays a reddish-brown or brown body with darker zigzag or blotched patterns. These distinct colorations help in recognizing these snakes in the wild.",
     },
     {
         title: "Pupils",
